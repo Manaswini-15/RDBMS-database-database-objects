@@ -1,0 +1,69 @@
+/*A relational database is a collection of data organized into a table structure.
+ This concept, proposed by IBM mathematician Edgar F. Cobb in 1970, revolutionized the world of databases by making data more easily accessible by many more users.
+ Before the establishment of relational databases, only users with advanced programming skills could retrieve or query their data.
+ Within the table structure, the rows are called “records” or “tuples” and the columns are called “attributes.” 
+ The structure allows users to identify and access data in relation to another piece of data in the table, or other tables within the database. 
+ Tables can be modified, or rows and columns can be added or removed without affecting the rest of the database*/
+// Reasons of using RDBMS:
+// i)Performance: The performance of relational databases has been perfected to support the world’s most demanding data-centric services, including modern capabilities like caching and in-memory techniques.
+// ii)Reliability.: With a long history of successfully supporting the world’s largest governments and businesses, the relational database has proven to be trustworthy and reliable.
+// iii)Integration: Relational databases have supported countless transactions since the 1980’s, meaning virtually every system within a government or enterprise is already integrated with the technology. 
+// iv)Security: Today’s relational databases perform like security veterans, having matured over the 30 years that they have been protecting the world’s most sensitive data.
+// v)Skills:Professionals have developed and honed their RDBMS and SQL skills for decades.
+ 
+ 
+ Normalization
+Normalization is the process of organizing the data in the database.
+Normalization is used to minimize the redundancy from a relation or set of relations. It is also used to eliminate the undesirable characteristics like Insertion, Update and Deletion Anomalies.
+Normalization divides the larger table into the smaller table and links them using relationship.
+The normal form is used to reduce redundancy from the database table.
+Normal Form	    Description
+1NF     -    	A relation is in 1NF if it contains an atomic value.
+2NF     -     A relation will be in 2NF if it is in 1NF and all non-key attributes are fully functional dependent on the primary key.
+3NF     -    	A relation will be in 3NF if it is in 2NF and no transition dependency exists.
+4NF	    -     A relation will be in 4NF if it is in Boyce Codd normal form and has no multi-valued dependency.
+5NF     -     A relation is in 5NF if it is in 4NF and not contains any join dependency and joining should be lossless.
+First Normal Form (1NF)
+A relation will be 1NF if it contains an atomic value.
+It states that an attribute of a table cannot hold multiple values. It must hold only single-valued attribute.
+First normal form disallows the multi-valued attribute, composite attribute, and their combinations.
+Example: Relation EMPLOYEE is not in 1NF because of multi-valued attribute EMP_PHONE
+
+
+Second Normal Form (2NF)
+In the 2NF, relational must be in 1NF.
+In the second normal form, all non-key attributes are fully functional dependent on the primary key
+Example: Let's assume, a school can store the data of teachers and the subjects they teach. In a school, a teacher can teach more than one subject.
+
+Third Normal Form (3NF)
+A relation will be in 3NF if it is in 2NF and not contain any transitive partial dependency.
+3NF is used to reduce the data duplication. It is also used to achieve the data integrity.
+If there is no transitive dependency for non-prime attributes, then the relation must be in third normal form.
+A relation is in third normal form if it holds atleast one of the following conditions for every non-trivial function dependency X → Y.
+
+1)X is a super key.
+2)Y is a prime attribute, i.e., each element of Y is part of some candidate key.
+
+
+Boyce-Codd Normal form (BCNF)
+– Slight difference with 3NF
+– To be in 3NF but not in BNF, needs two composite
+candidate keys, with one attribute of one key depending
+on one attribute of the other
+– Not very common J
+– If a table contains only one candidate key, the 3NF and the
+BCNF are equivalent.
+
+
+Fourth normal form (4NF)
+A relation will be in 4NF if it is in Boyce Codd normal form and has no multi-valued dependency.
+For a dependency A → B, if for a single value of A, multiple values of B exists, then the relation will be a multi-valued dependency.
+
+Fifth normal form (5NF)
+A relation is in 5NF if it is in 4NF and not contains any join dependency and joining should be lossless.
+5NF is satisfied when all the tables are broken into as many tables as possible in order to avoid redundancy.
+5NF is also known as Project-join normal form (PJ/NF).
+
+
+
+
